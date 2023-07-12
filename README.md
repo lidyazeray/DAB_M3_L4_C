@@ -1,5 +1,8 @@
-﻿# DatabaseProjectAuthentication
-NOTE: Remeber to create the .env file with the information for your databse. The username, password, database and host information needs to be in the .env file.
+![](http://143.42.108.232/pvt/Noroff-64.png)
+# Back-end Development Year 1
+ 
+ ## DAB Module 3 Lesson 4 - Hotel application
+NOTE: Remember to create the .env file with the information for your database. The username, password, database and host information needs to be in the .env file.
 
 ### Setup the database with initial data
 Insert default values with no users
