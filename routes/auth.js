@@ -5,6 +5,7 @@ var crypto = require('crypto');
 var db = require('../models');
 var UserService = require('../services/UserService');
 var userService = new UserService(db);
+var router = express.Router();
 
 passport.use(
 	new LocalStrategy(function verify(username, password, cb) {
@@ -37,7 +38,6 @@ passport.deserializeUser(function (user, cb) {
 	});
 });
 
-var router = express.Router();
 router.get('/login', function (req, res, next) {
 	const username = req.user?.username;
 	res.render('login', { username });
