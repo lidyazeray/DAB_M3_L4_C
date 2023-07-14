@@ -19,11 +19,13 @@
         </span>
         <a href="/rooms/<%=hotel.id%>" class="col btn btn-secondary"> Rent a room</a>
         <a href="/hotels/<%=hotel.id%>" class="col btn btn-secondary"> Details</a>
+        <button class="col-2 btn btn-secondary" onclick="deleteHotel(<%=hotel.id%>)"> Delete</button>
       </div>
       <% }); %>
   </div>
   <button onclick="addHotel('/hotels' )" class="btn btn-success"> Add a new hotel</button>
   <script src="../javascripts/addHotel.js"></script>
+  <script src="../javascripts/deleteHotel.js"></script>
 </body>
 
 </html>
