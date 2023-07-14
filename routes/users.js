@@ -13,7 +13,7 @@ router.get('/', canSeeUserList, async function (req, res, next) {
 	res.render('users', { users: users });
 });
 
-router.get('/:userId', async function(req, res, next) {
+router.get('/:userId', checkIfAuthorized, isAdmin, async function(req, res, next) {
   const user = await userService.getOne(req.params.userId);
   res.render('userDetails', {user: user});
 });
