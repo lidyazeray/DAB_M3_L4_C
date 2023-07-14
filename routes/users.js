@@ -13,6 +13,11 @@ router.get('/', canSeeUserList, async function (req, res, next) {
 	res.render('users', { users: users });
 });
 
+router.get('/:userId', async function(req, res, next) {
+  const user = await userService.getOne(req.params.userId);
+  res.render('userDetails', {user: user});
+});
+
 router.delete('/', checkIfAuthorized, isAdmin, jsonParser, async function (req, res, next) {
 	let id = req.body.id;
 	await userService.deleteUser(id);
