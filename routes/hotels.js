@@ -33,12 +33,6 @@ router.post('/', checkIfAuthorized, isAdmin, jsonParser, async function (req, re
 	res.end();
 });
 
-router.delete('/', checkIfAuthorized, jsonParser, async function (req, res, next) {
-	let id = req.body.id;
-	await hotelService.deleteHotel(id);
-	res.end();
-});
-
 router.delete('/:id', checkIfAuthorized, jsonParser, async function (req, res, next) {
 	await hotelService.deleteHotel(req.params.id);
 	res.end();
