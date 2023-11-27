@@ -1,4 +1,4 @@
-![](http://143.42.108.232/pvt/Noroff-64.png)
+![](http://images.restapi.co.za/pvt/Noroff-64.png)
 # Back-end Development Year 1
  
  ## DAB Module 3 Lesson 4 - Hotel application
