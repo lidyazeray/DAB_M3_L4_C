@@ -16,7 +16,7 @@
           <span class="col py-1 bg-info">Room for <%=room.Capacity%> people<span class="right">Daily cost:
                 <%=room.PricePerDay%>
               </span></span>
-          <button onclick="makeReservation('<%userId%>','<%=room.id%>','/rooms/reservation' )"
+          <button onclick="makeReservation('<%=userId%>','<%=room.id%>','/rooms/reservation' )"
             class="col btn btn-secondary"> Rent a room</button>
         </div>
         <% }); %>
