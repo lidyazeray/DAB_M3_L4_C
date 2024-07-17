@@ -1,11 +1,13 @@
+﻿
 ![](http://images.restapi.co.za/pvt/Noroff-64.png)
-# Back-end Development Year 1
- 
- ## DAB Module 3 Lesson 4 - Hotel application
+# Noroff
+## Back-end Development Year 1
+### DAB Project Authentication Hotel Management
 NOTE: Remember to create the .env file with the information for your database. The username, password, database and host information needs to be in the .env file.
 
 ### Setup the database with initial data
 Insert default values with no users
+
 ```sql
 INSERT INTO Hotels (Name, Location)
 VALUES ('Street Motel', 'Chicago');
@@ -26,6 +28,7 @@ VALUES (1, 1, 4);
 INSERT INTO Reservations (UserId, RoomId, StartDate, EndDate)
 VALUES (1, 1, '2022-11-11 10:00:00', '2022-11-14 10:00:00');
 ```
+
 
 ### Stored procedure
 ```sql
