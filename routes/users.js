@@ -15,7 +15,8 @@ router.get('/', canSeeUserList, async function(req, res, next) {
 
 router.get('/:userId', canSeeUserDetails, async function(req, res, next) {
   const user = await userService.getOne(req.params.userId);
-  res.render('userDetails', {user: user});
+  const username = req.user ? req.user.username : null;
+  res.render('userDetails', { user: user, username: username });
 });
 
 router.delete('/', checkIfAuthorized, isAdmin, jsonParser, async function(req, res, next) {
