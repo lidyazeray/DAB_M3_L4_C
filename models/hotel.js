@@ -3,6 +3,7 @@ module.exports = (sequelize, Sequelize) => {
         Name: Sequelize.DataTypes.STRING,
         Location: Sequelize.DataTypes.STRING
     },{
+        tableName: 'Hotels',  
         timestamps: false
     });
     Hotel.associate = function(models) {
